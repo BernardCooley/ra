@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+
+.headerContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $text;
+    z-index: 1;
+    background: linear-gradient(-45deg, #32373b, #4a5859, #b0b0b0, #5ab1bb);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    animation: gradient 30s ease infinite;
+    transition: 500ms;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.slideUp {
+    top: -50px;
+    width: 30%;
+    background: linear-gradient(90deg, #5ab1bb, #5ab1bb, transparent);
+    border-radius: 0 0 200px 0;
+}

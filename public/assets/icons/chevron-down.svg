@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Atom/Icon/Web/ContentNavigation/Navigation/Chevron_Down</title>
+    <g id="Atom/Icon/Web/ContentNavigation/Navigation/Chevron_Down" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="chevron-down-signs">
+            <rect id="Rectangle" x="0" y="0" width="32" height="32" fill="none"></rect>
+            <path d="M8,12.7180436 C8,12.5362604 8.07271328,12.3423584 8.21813984,12.2090507 C8.49687409,11.9303164 8.95739153,11.9303164 9.24824466,12.2090507 L15.9985094,18.959279 L22.7608445,12.2090507 C23.0395787,11.9303164 23.5000962,11.9303164 23.7909493,12.2090507 C24.0696836,12.4877849 24.0696836,12.9483024 23.7909493,13.2391555 L16.5196212,20.5104957 C16.240887,20.78923 15.7803695,20.78923 15.4895164,20.5104957 L8.21813984,13.2391555 C8.07271328,13.0937289 8,12.8998269 8,12.7180436 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

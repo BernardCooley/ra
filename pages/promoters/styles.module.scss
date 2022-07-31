@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+
+.listItem {
+    width: 90%;
+    margin: auto;
+}
+
+.eventsLabel {
+    color: $secondary;
+    user-select: none;
+}
+
+.sortAndOrderContainer {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    -webkit-box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+    box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+    border-radius: 15px;
+    background-color: $pane-background;
+    height: auto;
+    padding: 12px 0;
+    position: relative;
+}

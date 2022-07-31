@@ -1,0 +1,80 @@
+@import "../../styles/variables";
+
+.addCommentContainer {
+    padding: 24px;
+    position: absolute;
+    width: 100%;
+    -webkit-box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+    box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: block;
+}
+
+.button {
+    box-shadow: 5px 5px 11px 0px rgb(0 0 0 / 72%);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    color: $text;
+    transition: 300ms;
+
+    &.commentButton {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    &.addButton {
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
+        padding: 8px;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &:hover:not(:disabled) {
+        cursor: pointer;
+        background-color: rgba(125, 123, 123, 0.5);
+        box-shadow: 5px 5px 11px 0px rgb(0 0 0 / 72%);
+    }
+}
+
+.formButton {
+    margin: 12px 12px 0 12px;
+}
+
+.textBoxContainer {
+    .growWrap {
+        display: grid;
+
+        &::after {
+            content: attr(data-replicated-value) " ";
+            white-space: pre-wrap;
+            visibility: hidden;
+        }
+
+        textarea {
+            resize: none;
+            overflow: hidden;
+            width: 100%;
+            padding: 8px;
+            font-size: 18px;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+                Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+                sans-serif;
+            background-color: rgb(246 246 246 / 74%);
+        }
+    }
+}
+
+.growWrap > textarea,
+.growWrap::after {
+    border: 1px solid black;
+    padding: 0.5rem;
+    font: inherit;
+    grid-area: 1 / 1 / 2 / 2;
+}

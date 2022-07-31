@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+
+.navContainer {
+    height: auto;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+    color: $text;
+    transition: 500ms;
+    position: relative;
+    bottom: 0px;
+    padding-right: 0px;
+
+    li {
+        transition: 200ms;
+
+        &:hover:not(.selected) {
+            transform: scale(1.1);
+            // text-decoration: underline;
+            border-bottom: 1px solid $text;
+        }
+    }
+}
+
+.slideUp {
+    bottom: -25px;
+    font-size: 22px;
+    padding: 8px;
+    padding-left: 8px;
+    padding-right: 42px;
+
+    li {
+        margin-right: 12px;
+    }
+}
+
+.selected {
+    border-top: 1px solid $text;
+    border-bottom: 3px double $text;
+}

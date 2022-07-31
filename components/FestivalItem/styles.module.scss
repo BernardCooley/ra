@@ -1,0 +1,114 @@
+@import "../../styles/variables";
+
+.festivalItemContainer {
+    padding: 8px 0 30px 0;
+    font-size: 18px;
+    color: $text;
+    position: relative;
+    border-bottom: 1px solid black;
+}
+
+.opaque {
+    opacity: 0.2;
+}
+
+.name,
+.location,
+.events,
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.events {
+    padding: 0 34px;
+}
+
+.staticElement {
+    cursor: default;
+    user-select: none;
+}
+
+.title {
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: default;
+    user-select: none;
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: 100%;
+    padding-left: 0;
+    min-height: 148px;
+
+    :last-child {
+        border-right: none;
+    }
+
+    li {
+        border-right: 1px solid #f7f7ff54;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 12px;
+
+        a {
+            transition: 200ms;
+            &:hover {
+                color: $border-colour;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.infoSection {
+    height: auto;
+    padding: 24px;
+    padding-top: 28px;
+}
+
+li.checkboxContainer {
+    padding-left: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    label {
+        margin-bottom: 12px;
+    }
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.commentButtons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.lineup {
+    width: 100%;
+    text-align: center;
+}

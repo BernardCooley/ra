@@ -1,0 +1,72 @@
+@import "../../styles/variables";
+
+.orderBycontainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+    padding-left: 0;
+
+    .listItemContainer {
+        border-right: 1px solid #f7f7ff54;
+        position: relative;
+    }
+
+    :last-child {
+        border-right: none;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        line-height: 22px;
+        font-size: 18px;
+        position: relative;
+    }
+}
+
+.fieldLabel {
+    transition: 200ms;
+    user-select: none;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+
+.selected {
+    color: $text;
+}
+
+.sortArrow {
+    position: absolute;
+    left: 118px;
+    top: -4px;
+}
+
+.sortArrowDown,
+.sortArrowUp {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sortArrowDown {
+    top: 14px;
+}
+
+.sortArrowUp {
+    top: -18px;
+}

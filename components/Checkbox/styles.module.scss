@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.formControl {
+    font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    user-select: none;
+
+    &:hover:not(input:disabled),
+    input:hover:not(:disabled) {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.backToTopContainer {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    z-index: 1;
+    transition: 200ms;
+    border-radius: 50px;
+
+    &:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+        box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.72);
+    }
+
+    button {
+        text-align: center;
+        border: none;
+        color: $text;
+        font-size: 18px;
+        padding: 8px;
+        background-color: $pane-background;
+        border-radius: 50px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.hidden {
+    pointer-events: none;
+    bottom: -45px;
+}

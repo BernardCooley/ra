@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.filterContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid $border-colour;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+
+.clearButton {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: transparent;
+    border: none;
+    color: $text;
+    transition: 200ms;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    width: 100%;
+    padding-left: 0;
+
+    :last-child {
+        border-right: none;
+    }
+
+    li {
+        border-right: 1px solid #f7f7ff54;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
