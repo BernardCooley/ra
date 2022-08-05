@@ -5,6 +5,7 @@ import {
     OrderByContextProvider,
     PromotersContextProvider,
     FestivalFilterContextProvider,
+    NavContextProvider,
 } from "../Contexts/AllContexts";
 import BackToTop from "../components/BackToTop/BackToTop";
 import { useScrollDirection } from "../Hooks/useScrollDirection";
@@ -15,15 +16,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <BackToTop hide={scrollPosition < 50} />
-            <FestivalFilterContextProvider>
-                <PromotersContextProvider>
-                    <FilterContextProvider>
-                        <OrderByContextProvider>
-                            <Component {...pageProps} />
-                        </OrderByContextProvider>
-                    </FilterContextProvider>
-                </PromotersContextProvider>
-            </FestivalFilterContextProvider>
+            <NavContextProvider>
+                <FestivalFilterContextProvider>
+                    <PromotersContextProvider>
+                        <FilterContextProvider>
+                            <OrderByContextProvider>
+                                <Component {...pageProps} />
+                            </OrderByContextProvider>
+                        </FilterContextProvider>
+                    </PromotersContextProvider>
+                </FestivalFilterContextProvider>
+            </NavContextProvider>
         </>
     );
 }

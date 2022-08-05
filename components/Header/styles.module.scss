@@ -3,15 +3,28 @@
 .headerContainer {
     width: 100%;
     position: fixed;
-    top: 0;
     left: 0;
     color: $text;
     z-index: 1;
-    background: linear-gradient(-45deg, #32373b, #4a5859, #b0b0b0, #5ab1bb);
+    background: linear-gradient(
+        0deg,
+        transparent,
+        #32373b,
+        #4a5859,
+        #b0b0b0,
+        #5ab1bb
+    );
     background-size: 100% 100%;
     background-attachment: fixed;
     animation: gradient 30s ease infinite;
     transition: 500ms;
+    transform: translateY(-100%);
+    top: 0;
+}
+
+.openNav {
+    transform: translateY(0px);
+    padding-bottom: 70px;
 }
 
 @keyframes gradient {
@@ -29,8 +42,10 @@
 }
 
 .slideUp {
-    top: -50px;
-    width: 30%;
-    background: linear-gradient(90deg, #5ab1bb, #5ab1bb, transparent);
-    border-radius: 0 0 200px 0;
+    @media screen and (min-width: $desktop) {
+        top: -50px;
+        width: 30%;
+        background: linear-gradient(90deg, #5ab1bb, #5ab1bb, transparent);
+        border-radius: 0 0 200px 0;
+    }
 }

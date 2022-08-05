@@ -9,14 +9,19 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: bold;
-    align-items: center;
+    align-items: flex-start;
     color: $text;
     transition: 500ms;
     position: relative;
     bottom: 0px;
     padding-right: 0px;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+        flex-direction: row;
+    }
 
     li {
         transition: 200ms;
@@ -30,18 +35,35 @@
 }
 
 .slideUp {
-    bottom: -25px;
-    font-size: 22px;
-    padding: 8px;
-    padding-left: 8px;
-    padding-right: 42px;
+    @media screen and (min-width: $tablet) {
+        bottom: -25px;
+        font-size: 22px;
+        padding: 8px;
+        padding-left: 8px;
+        padding-right: 42px;
 
-    li {
-        margin-right: 12px;
+        li {
+            margin-right: 12px;
+        }
     }
 }
 
 .selected {
     border-top: 1px solid $text;
     border-bottom: 3px double $text;
+}
+
+.closeButton {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    transition: 500ms;
+    padding: 12px;
+}
+
+.navOpen {
+    opacity: 1;
 }

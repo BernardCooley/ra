@@ -31,6 +31,10 @@ export interface IPromoterItem {
     };
 }
 
+export interface INav {
+    [key: string]: any;
+}
+
 export interface IFestivalItem {
     docId: string;
     festival: {
